@@ -12,9 +12,11 @@
     .svg-normal-mask {
         -webkit-mask: url(logo_shape.svg) ;
         mask: url(logo_shape.svg);
-        -webkit-mask-position: 0px -110px;
-        animation: up_n_down 10s infinite;
-
+        -webkit-mask-position: 0px -90px;
+        animation: up_n_down 6s infinite alternate;
+        /*-webkit-animation-direction: alternate;*/
+        /*animation: up_n_down 6s infinite  normal ease-out;*/
+       
     }
 
     body {
@@ -39,7 +41,28 @@
     -webkit-mask-position: 0px 0px;
   }
 
+ /* 50%
+{
+    -webkit-mask-position: 0px 80px;
+  },
+ */
+
 }
+
+
+/*@keyframes down {
+  100% {
+    -webkit-mask-position: 0px 0px;
+  },
+  50%
+{
+    -webkit-mask-position: 0px 200px;
+  },
+  0% {
+    -webkit-mask-position: 0px 0px;
+  }
+
+}*/
 
 /*@-webkit-keyframes up_n_down {
   0% {
