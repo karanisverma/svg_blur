@@ -1,29 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<style type="text/css">
-		img {
-  width: 100%;
-box-sizing: border-box;
+    <title></title>
+    <style type="text/css">
+    img {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .svg-normal-mask {
+        -webkit-mask: url(logo_shape.svg) ;
+        mask: url(logo_shape.svg);
+        -webkit-mask-position: 0px -110px;
+        animation: up_n_down 10s infinite;
+
+    }
+
+    body {
+        margin: 0px
+    }
+
+    p {
+        background-image: url(img_blur.jpg);
+        margin: 0px;
+    }
+
+
+@keyframes up_n_down {
+  0% {
+    -webkit-mask-position: 0px 0px;
+  },
+  50%
+{
+    -webkit-mask-position: 0px 200px;
+  },
+  100% {
+    -webkit-mask-position: 0px 0px;
+  }
+
 }
 
-.svg-normal-mask {
-  -webkit-mask: url(logo_shape.svg) no-repeat;
-          mask: url(logo_shape.svg) no-repeat;
-}
-body{margin: 0px}
-p{
-	background-image: url(img_blur.jpg);
-	margin: 0px;
-}
-
-	</style>
+/*@-webkit-keyframes up_n_down {
+  0% {
+    -webkit-mask-position: 0px -150px;
+  },
+  50% {
+    -webkit-mask-position: 0px 450px;
+  },
+  100% {
+    -webkit-mask-position: 0px -150px;
+  }
+}*/
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 </head>
-<body>
-<p>
-	<img src="img.jpg" alt="" class="svg-normal-mask" />
-</p>
 
+<body>
+    <p class="s">
+        <img src="img.jpg" alt="" class="svg-normal-mask" />
+    </p>
 </body>
+<script type="text/javascript">
+// function logo_animate(i) {
+//     if (i < 500) {
+//         i = i + 1;
+//         var html = $(".s").html('<img src="img.jpg" alt="" class="svg-normal-mask" style="-webkit-mask: url(logo_shape.svg) 0px ' + i + 'px;">');
+//         console.log(html);
+//         setTimeout(logo_animate(i),10000);
+//     }
+// }
+
+
+
+// $(document).ready(function() {
+//     logo_animate(0);
+// });
+</script>
+
 </html>
